@@ -7,7 +7,7 @@ const app = express()
 // require express-handlebars for our templating
 const exprshbs = require('express-handlebars')
 // import our exported connect db function written in the ./mongoose file
-const connectDBMongoose = require('./mongoose')
+const connectDBMongoose = require('./config/mongoose')
 // require our path module
 const path = require('path')
 // set a default port for localhost 1337 - or if a port is provided by our .env
