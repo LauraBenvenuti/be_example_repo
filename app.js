@@ -12,10 +12,8 @@ const connectDBMongoose = require('./config/mongoose')
 const path = require('path')
 // set a default port for localhost 1337 - or if a port is provided by our .env
 const PORT = process.env.PORT || 1337
-
 // we call our connect to DB func. once inside our app.js
 connectDBMongoose()
-
 // set our public folder to serve our static files such as client side js and css
 app.use(express.static('public'))
 // set our views folder
@@ -27,7 +25,6 @@ app.set('view engine', 'handlebars')
 app.get('/', (req, res) => {
   res.render('home')
 })
-
 
 app.listen(PORT, () => {
   console.log(`app connected to port: ${PORT}`)
